@@ -2,7 +2,6 @@
 
 In Java, the name of a **variable, class, method, or object** is called an **identifier**.
 
----
 
 ## Rules for Identifiers
 
@@ -16,7 +15,6 @@ In Java, the name of a **variable, class, method, or object** is called an **ide
 - The symbol `$` is allowed, but it is **reserved for special purposes** and should generally be avoided
 - Cannot use Java keywords  
 
----
 
 ## Identifier Rule Examples
 
