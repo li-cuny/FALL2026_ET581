@@ -1,3 +1,19 @@
+## Java
+![c++](files/c++.png)
+![java](files/java.png)
+## Java Platforms (JVM, JRE, JDK)
+
+### JVM – Java Virtual Machine
+- Translate bytecode to machine code  
+
+### JRE – Java Runtime Environment
+- **JVM + core libraries (API)**  
+- Can **run** Java programs  
+
+### JDK – Java Development Kit
+- **JRE + compiler + dev tools (javac, javadoc, etc.)**  
+- Can **write, compile, and run** Java programs  
+
 
 ## First Java Program Basics
 
