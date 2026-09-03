@@ -135,6 +135,8 @@ byte a = 10;
 byte b = 20;
 // ❌ Compile-time error
 byte c = a + b;   // a + b is promoted to int, not byte
+```
+```java
 byte a = 5;
 short b = 10;
 int c = a + b;      // calculation done as int ✔
