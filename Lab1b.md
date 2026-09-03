@@ -176,21 +176,24 @@ BigDecimal y = new BigDecimal("0.2");
 System.out.println(x.add(y)); // 0.3
 ```
 
-### Parentheses and Precedence Rules
+### Parentheses 
 
 - **Parentheses** are used to explicitly control the order of evaluation in an expression.
 - Fully parenthesized expressions remove any ambiguity.
 ```java
 int result = 1 + 2 * 3 + 4;
 ```
-### unary operator
+### Precedence Rules
+- https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html
+
+#### unary operator
 | Operator | Description | Example | Output |
 |----------|------------|---------|--------|
 | `++i`   | Pre-increment: increment first, then use value | `int i = 5; System.out.println(++i);` | 6 |
 | `i++`   | Post-increment: use value first, then increment | `int i = 5; System.out.println(i++);` | 5 |
 |`!x`|Logical NOT|`boolean x = true; System.out.println(!x)`|false|
 
-### Division operator
+#### Division operator
 - **Integer division** truncates decimals; 
 - **double division** keeps decimals 
 
