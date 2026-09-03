@@ -72,16 +72,19 @@ double speed, distance;
 - **Non-primitive types:** Strings, Arrays, Objects 
 
 #### Primitive types
-| **Type Name** | **Kind of Value**          | **Memory Used** | **Range**                                                   |
-| ------------- | -------------------------- | --------------- | ----------------------------------------------------------- |
-| `boolean`     | true or false              | 1 byte         | Not applicable                                              |
-| `char`        | Single character (Unicode) | 2 bytes         | Common Unicode characters                                   |
-| `byte`        | Integer                    | 1 byte          | −128 to 127                                                 |
-| `short`       | Integer                    | 2 bytes         | −32,768 to 32,767                                           |
-| `int`         | Integer                    | 4 bytes         | −2,147,483,648 to 2,147,483,647                             |
-| `long`        | Integer                    | 8 bytes         | −9,223,372,036,854,775,808 to 9,223,372,036,854,775,807     |
-| `float`       | Floating-point number      | 4 bytes         | 1.40239846 × 10⁻⁴⁵ to 3.40282347 × 10³⁸                     |
-| `double`      | Floating-point number      | 8 bytes         | 4.94065645841246544 × 10⁻³²⁴ to 1.79769313486231570 × 10³⁰⁸ |
+#### Primitive Types
+
+| **Type Name** | **Kind of Value** | **Memory Used** | **Range** | **Example** |
+|---|---|---:|---|---|
+| `boolean` | true or false | 1 byte* | `true` or `false` | `boolean isActive = true;` |
+| `char` | Single character (Unicode) | 2 bytes | `\u0000` to `\uFFFF` | `char grade = 'A';` |
+| `byte` | Integer | 1 byte | −128 to 127 | `byte age = 25;` |
+| `short` | Integer | 2 bytes | −32,768 to 32,767 | `short year = 2026;` |
+| `int` | Integer | 4 bytes | −2,147,483,648 to 2,147,483,647 | `int count = 1000;` |
+| `long` | Integer | 8 bytes | −9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 | `long distance = 1000L;` |
+| `float` | Floating-point number | 4 bytes | ~1.4 × 10⁻⁴⁵ to ~3.4 × 10³⁸ | `float price = 19.99f;` |
+| `double` | Floating-point number | 8 bytes | ~4.9 × 10⁻³²⁴ to ~1.8 × 10³⁰⁸ | `double pi = 3.14159;` |
+
 
 ## Assignment Statements
 An assignment statement evaluates the expression on the right-hand side and stores the result in the variable on the left-hand side.
