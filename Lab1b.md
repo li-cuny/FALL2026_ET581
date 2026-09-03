@@ -123,28 +123,41 @@ char firstChar = 'B';
 - `/` (division)
 - `%` (remainder)
 
-#### General Rules
-- Operands are **promoted before calculation**.
+#### Special Rule
+For `byte`, `short`, and `char` are automatically promoted to `int` before the calculation is performed.
 ```
-byte → short → int → long → float → double
+byte → int 
+short → int
+char  → int
 ```
-- Java evaluates arithmetic expressions using the **widest required type**.
-
 ```java
 byte a = 10;
 byte b = 20;
-
 // ❌ Compile-time error
 byte c = a + b;   // a + b is promoted to int, not byte
-```
-```java
 byte a = 5;
 short b = 10;
 int c = a + b;      // calculation done as int ✔
+```
+
+#### General Rules
+- Operands are **promoted before calculation**.
+```
+byte  ─┐
+short ─┼──→ int → long → float → double
+char  ─┘
+
+```
+- Java evaluates arithmetic expressions using the **widest required type**.
+```java
 int x = 5;
 double y = 2.5;
 double z = x + y; // calculation done as double ✔
+int a = 1;
+long b = 2;
+long c = a + b;
 ```
+
 
 #### Floating-point calculations are **not exact** → use `BigDecimal` when exact precision is required
 ```java
