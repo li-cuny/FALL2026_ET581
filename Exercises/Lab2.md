@@ -44,8 +44,19 @@ Write a program that asks the user to enter a string.
 Enter a string: Programming
 Length: 11
 ```
-
 **Method to use:** `length()`
+
+* How to read a String from the user
+```java
+// read line of string from the user
+Scanner input = new Scanner(System.in);
+
+System.out.print("Enter a string: ");
+String text = input.nextLine(); // read whole line of string from the user.
+
+System.out.println("You entered: " + text);
+```
+
 
 ---
 
