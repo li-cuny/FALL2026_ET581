@@ -77,7 +77,7 @@ Write a program that asks the user to enter two strings and determines whether t
 ```text
 Enter first string: Java
 Enter second string: Java
-The strings are equal.
+The strings are equal : true.
 ```
 
 Try your program again with:
