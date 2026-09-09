@@ -114,7 +114,7 @@ student
 
 ```text
 Enter username: STUDENT
-Username accepted.
+Username accepted : true
 ```
 
 The following should all be accepted:
