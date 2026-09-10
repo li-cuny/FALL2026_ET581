@@ -1,4 +1,4 @@
-# 📝 Java Practice Exercises
+# 📝 Practice Exercises – Lab 2b
 
 ## Exercise 1 — Compare Two Numbers
 
