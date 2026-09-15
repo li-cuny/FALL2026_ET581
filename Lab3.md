@@ -76,7 +76,7 @@ System.out.println(n); //4
 using while loop
 ```java
 int n = 0;
-while (count < 5) {
+while (n < 5) {
     System.out.println(n);
     n++;
 }
