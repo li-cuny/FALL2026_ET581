@@ -110,15 +110,14 @@ while (i <= 5) {
 - Think of it as **“continue to the next round.”**
 
 ```java
-int i = 1;
+int i = 0;
 
 while (i <= 5) {
-
+    i++;
     if (i == 3) {
-        break;   // exit the loop immediately
+        continue;   // exit the loop immediately
     }
     System.out.println(i);
-    i++;
 }
 ```
 ### Output
