@@ -115,7 +115,7 @@ int i = 0;
 while (i <= 5) {
     i++;
     if (i == 3) {
-        continue;   // exit the loop immediately
+        continue;   // skip current iteration continue to next round
     }
     System.out.println(i);
 }
