@@ -1,4 +1,4 @@
-# **While Loop Practice Exercises**
+# **Loop Practice Exercises**
 
 ## **Exercise 1 — Print Numbers 1 to 10**
 
