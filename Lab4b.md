@@ -73,7 +73,7 @@ public static void main(String[] args) {
     }
 }
 ```
-Same as nested for loops.
+the above code is the same as the below code.
 
 ```java
 for (int i = 1; i <= 3; i++) {
