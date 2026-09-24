@@ -72,8 +72,8 @@ public static void main(String[] args) {
         printRowOfHello();
     }
 }
-```java
-
+```
+Same as nested for loops.
 
 ```java
 for (int i = 1; i <= 3; i++) {
