@@ -1,7 +1,7 @@
 # Java Arrays – Practice Exercises
 
 ### 1. Print Elements
-Create a method that receives an integer array as a parameter and prints all elements.
+Create an array and print all elements using:
 - a basic `for` loop  
 - an enhanced `for-each` loop  
 
