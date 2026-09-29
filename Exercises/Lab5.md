@@ -1,7 +1,7 @@
 # Java Arrays – Practice Exercises
 
 ### 1. Print Elements
-Create an array of 5 integers and print all elements using:
+Create a method that receives an integer array as a parameter and prints all elements.
 - a basic `for` loop  
 - an enhanced `for-each` loop  
 
@@ -73,7 +73,7 @@ Modify the array so it becomes:
 {5, 4, 3, 2, 1}
 ```
 
-### 8. Linear Search
+### 7. Linear Search
 ```java
 int[] numbers = {2, 4, 6, 8, 10};
 ```

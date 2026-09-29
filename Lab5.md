@@ -148,11 +148,23 @@ System.out.println(b[0]); // 99
 ## 7. array with method 
 * array as param
 ```
-static void method(int[] array){}
+static void method(int[] array){
+    // print array
+}
+static void main(String[] args){
+    int[] a = {1, 2, 3};
+    method(a);
+}
 ```
 * method return array
 ```
-static int[] method(){}
+static int[] method(){
+    int[] b = {1, 2, 3};
+    return b;
+}
+static void main(String[] args){
+    int a[] = method(); 
+}
 ```
 
 ---
