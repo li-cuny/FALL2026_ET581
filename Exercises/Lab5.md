@@ -90,10 +90,15 @@ Expected Output:
 
 ### 8. Check if Array is Sorted
 
-Determine whether the array is sorted in ascending order.
-
-Examples:
+Write a method that returns boolean value of whether the array is sorted in ascending order.
+```java
+boolean isSorted(int[] array);
 ```
-{1, 2, 3, 4} → Sorted
-{1, 3, 2, 4} → Not sorted
+Examples:
+
+```java 
+int[] numbers = {1, 2, 3, 4};
+System.out.println(isSorted(numbers));// true;
+numbers = {1, 3, 2, 4};
+System.out.println(isSorted(numbers));// false;
 ```
