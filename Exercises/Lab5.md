@@ -19,7 +19,6 @@ output: 1 2 3 4 5
 ### 2. Print Elements in reverse order
 Create an array of 5 integers and print all elements in reverse order using:
 - a basic `for` loop  
-- an enhanced `for-each` loop  
 
 Create an array:
 
