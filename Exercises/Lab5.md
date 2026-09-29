@@ -61,16 +61,8 @@ int[] numbers = {4, 7, 9, 12, 6, 3};
 int count = countEven(numbers); // count = 3
 ```
 
-### 6. Reverse an Array (Without Creating New Array)
-```java
-int[] numbers = {1, 2, 3, 4, 5};
-```
-Modify the array so it becomes:
-```
-{5, 4, 3, 2, 1}
-```
 
-### 7. Linear Search
+### 6. Linear Search
 ```java
 int[] numbers = {2, 4, 6, 8, 10};
 ```
@@ -85,7 +77,7 @@ If not found:
 ```
 Number not found
 ```
-### 8. Remove Duplicates in sorted array
+### 7. Remove Duplicates in sorted array
 ```java
 int[] numbers = {1, 2, 2, 3, 4, 4, 5};
 ```
@@ -96,7 +88,7 @@ Expected Output:
 1 2 3 4 5
 ```
 
-### 9. Check if Array is Sorted
+### 8. Check if Array is Sorted
 
 Determine whether the array is sorted in ascending order.
 
