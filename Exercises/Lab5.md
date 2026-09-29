@@ -34,36 +34,34 @@ output: 5 4 3 2 1
 ---
 
 ### 3. Sum of Elements
-Create an array:
+Create an method that takes an int[] and returns all elements sum :
 
 ```java
-int[] numbers = {5, 10, 15, 20};
+int sum(int[] array);
 ```
 
 ### 4. Find the Largest Number
 
-Create an array:
-```java
-int[] numbers = {3, 8, 2, 10, 5};
-```
-Print the largest number.
+Create an method that takes an int[] and returns largest number.
 
-Expected Output:
 ```
-Largest = 10
+int largestNumber(int[] array);
+```
+example:
+```
+int[] numbers = {3, 8, 2, 10, 5};
+int max = largestNumber(numbers); // max = 10;
 ```
 ### 5. Count Even Numbers
-
-Create an array:
+create method that returns count of even numbers in the array.
+```
+int countEven(int[] array);
+```
 ```java
 int[] numbers = {4, 7, 9, 12, 6, 3};
+int count = countEven(numbers); // count = 3
 ```
-Count how many numbers are even.
 
-Expected Output:
-```
-Even count = 3
-```
 ### 6. Reverse an Array (Without Creating New Array)
 ```java
 int[] numbers = {1, 2, 3, 4, 5};
@@ -88,7 +86,7 @@ If not found:
 ```
 Number not found
 ```
-### 9. Remove Duplicates in sorted array
+### 8. Remove Duplicates in sorted array
 ```java
 int[] numbers = {1, 2, 2, 3, 4, 4, 5};
 ```
@@ -99,7 +97,7 @@ Expected Output:
 1 2 3 4 5
 ```
 
-### 10. Check if Array is Sorted
+### 9. Check if Array is Sorted
 
 Determine whether the array is sorted in ascending order.
 
