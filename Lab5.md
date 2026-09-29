@@ -145,6 +145,15 @@ b[0] = 99;
 System.out.println(a[0]); // 1
 System.out.println(b[0]); // 99
 ```
+## 7. array with method 
+* array as param
+```
+static void method(int[] array){}
+```
+* method return array
+```
+static int[] method(){}
+```
 
 ---
 
