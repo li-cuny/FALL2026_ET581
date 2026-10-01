@@ -162,7 +162,7 @@ Use nested `for` loops to replace every negative number with `0`.
 
 ---
 
-## **Exercise 7 — 2D Array and Method**
+## **Exercise 7 — 2D Array sum**
 
 Create a method:
 
@@ -187,9 +187,7 @@ int[][] numbers = {
 ```text
 Sum: 45
 ```
-## **Exercise 8 — 2D Array and Method: Sum**
-
-# 2D String Array to Lengths — Method Exercise
+## **Exercise 8 — 2D String Array to Lengths — Method Exercise
 
 Write a method named `getLengths()` that receives a 2D `String` array and returns a 2D `int` array containing the length of each String.
 
