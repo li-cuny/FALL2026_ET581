@@ -167,36 +167,6 @@ Use nested `for` loops to replace every negative number with `0`.
 Create a method:
 
 ```java
-static void printArray(int[][] arr)
-```
-
-The method should print all elements of a 2D array using nested `for` loops.
-
-In `main()`, call the method with:
-
-```java
-int[][] numbers = {
-    {1, 2, 3},
-    {4, 5, 6},
-    {7, 8, 9}
-};
-```
-
-### **Expected Output**
-
-```text
-1 2 3
-4 5 6
-7 8 9
-```
-
----
-
-## **Exercise 8 — 2D Array and Method: Sum**
-
-Create a method:
-
-```java
 static int sum(int[][] arr)
 ```
 
@@ -217,3 +187,52 @@ int[][] numbers = {
 ```text
 Sum: 45
 ```
+## **Exercise 8 — 2D Array and Method: Sum**
+
+# 2D String Array to Lengths — Method Exercise
+
+Write a method named `getLengths()` that receives a 2D `String` array and returns a 2D `int` array containing the length of each String.
+
+## Given Array
+
+```java
+String[][] words = {
+    {"cat", "apple", "dog"},
+    {"banana", "java", "computer"},
+    {"hi", "school", "book"}
+};
+```
+
+## Method
+
+Write the following method:
+
+```java
+static int[][] getLengths(String[][] words)
+```
+
+The method should return:
+
+```text
+3 5 3
+6 4 8
+2 6 4
+```
+
+## Requirements
+
+* Use **nested `for` loops** inside the method.
+* Create and return a new `int[][]` array.
+* Use `.length()` to get the length of each String.
+* Do not change the original `String[][]` array.
+* Print the returned `int[][]` in `main()`.
+
+## Expected Output
+
+```text
+3 5 3
+6 4 8
+2 6 4
+```
+
+---
