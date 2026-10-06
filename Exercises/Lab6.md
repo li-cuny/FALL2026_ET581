@@ -23,6 +23,7 @@ The method should print the fruit's name, color, and weight.
 ---
 
 ### **2. Create Multiple Fruit Objects**
+Create Main.java with `main()` entry point method.
 
 In `main()`, create **5 Fruit objects**:
 
@@ -100,4 +101,63 @@ Weight: 0.6
 Name: Mango
 Color: Green
 Weight: 0.8
+```
+### **5. Pass a Fruit Object to a Method**
+
+In `Main.java` create a method that accepts a `Fruit` object as a parameter.
+
+```java
+static void printFruit(Fruit fruit) {
+
+    fruit.showInfo();
+
+}
+```
+
+Then, in `main()`, call the method and pass a `Fruit` object:
+
+```java
+printFruit(fruit1);
+```
+
+You can also pass different Fruit objects:
+
+```java
+printFruit(fruit1);
+printFruit(fruit2);
+printFruit(fruit3);
+```
+
+### **Example**
+
+```java
+public static void printFruit(Fruit fruit) {
+
+    fruit.showInfo();
+
+}
+```
+
+Calling:
+
+```java
+printFruit(fruit1);
+```
+
+means that the `fruit1` object is passed to the `printFruit()` method.
+
+### 6. Pass two Fruit Object to a Method**
+
+In Main.java create a method called `compareWeight()` that accepts **two `Fruit` objects**:
+
+```java
+static void compareWeight(Fruit fruit1, Fruit fruit2)
+```
+
+The method should print which fruit is heavier.
+
+For example:
+
+```text
+Mango is heavier than Apple
 ```
