@@ -161,3 +161,62 @@ For example:
 ```text
 Mango is heavier than Apple
 ```
+### **7. Pass a Fruit Array to a Method**
+
+Create a method called `getApples()` that accepts a `Fruit` array and **returns a new `Fruit` array containing only the apples**.
+
+```java
+static Fruit[] getApples(Fruit[] fruits)
+```
+
+The method should check each `Fruit` object and return only the objects whose `name` is `"Apple"`.
+
+### **Example**
+
+Call the method in `main()`:
+
+```java
+Fruit[] apples = getApples(fruits);
+```
+
+Then use a `for` loop to display the returned array:
+
+```java
+for (int i = 0; i < apples.length; i++) {
+    apples[i].showInfo();
+}
+```
+
+### **Example**
+
+If the original `fruits` array contains:
+
+```text
+Apple
+Mango
+Orange
+Apple
+Mango
+```
+
+The returned array should contain:
+
+```text
+Apple
+Apple
+```
+
+### **Method Signature**
+
+```java
+static Fruit[] getApples(Fruit[] fruits)
+```
+
+### **Hint**
+
+You will need to:
+
+1. Count how many Apple objects are in the array.
+2. Create a new `Fruit[]` array with that size.
+3. Copy only the Apple objects into the new array.
+4. Return the new array.
