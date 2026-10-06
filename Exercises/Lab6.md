@@ -212,6 +212,18 @@ Apple
 static Fruit[] getApples(Fruit[] fruits)
 ```
 
+### Sample output:
+```
+print Fruit[] apples:
+
+Name: Apple
+Color: Red
+Weight: 0.5
+
+Name: Apple
+Color: Green
+Weight: 0.6
+```
 ### **Hint**
 
 You will need to:
