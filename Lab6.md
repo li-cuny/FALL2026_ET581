@@ -100,9 +100,10 @@ public class Main {
 ```
 * Constructors run automatically when an object is created
 
-* A default constructor is a constructor that takes no parameters.
+### Default Constructor
+*  A default constructor is a constructor that takes no parameters.
 
-* If you do not create any constructor in your class, Java automatically provides a default constructor.
+##### If you do not create any constructor in your class, Java automatically provides a default constructor.
 ```java
 class Student {
     String name;
@@ -112,7 +113,7 @@ class Student {
     }
 }
 ```
-* If you create any constructor yourself, Java does not automatically create the no-argument default constructor.
+##### If you create any constructor yourself, Java does not automatically create the no-argument default constructor.
 ```java
 class Student {
     String name;
@@ -213,4 +214,3 @@ class Main {
         s1.display(); // inside of  method this mean s1 object
     }
 }
-
