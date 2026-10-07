@@ -129,7 +129,48 @@ class Student {
 }
 ```
 
-# 4. Access Modifiers
+# 4. Array with Class Object
+```java
+Student s1 = new Student("John", 20); 
+Student s2 = new Student("Mary", 21); 
+Student s3 = new Student("David", 19); 
+Student[] students = {s1, s2, s3}; 
+for (int i = 0; i < students.length; i++) {
+     students[i].display(); 
+}
+```
+
+# 5. this Keyword
+
+- The `this` keyword in Java is a reference variable that refers to the current object — the object whose method or constructor is being executed.
+
+
+```java
+class Student {
+    String name;
+    int age;
+
+    Student(String name, int age) {
+        this.name = name; // 'this' refers to current object
+        this.age = age;
+    }
+    void display() {
+        System.out.println(this.name + " " + this.age);
+    }
+
+}
+```
+```java
+class Main {
+    public static void main(String[] args){
+        Student s1 = new Student("John", 20); // inside of Constructor this mean s1 object 
+        Student s2 = new Student("Mary", 21); 
+        Student s3 = new Student("David", 19);
+        s1.display(); // inside of  method this mean s1 object
+    }
+}
+
+# 6. Access Modifiers
 
 Access modifiers control how class members are accessed.
 | Modifier    | Access                    |
@@ -174,43 +215,3 @@ public class Main {
 
 * This helps protect object data
 
-# 5. Array with Class Object
-```java
-Student s1 = new Student("John", 20); 
-Student s2 = new Student("Mary", 21); 
-Student s3 = new Student("David", 19); 
-Student[] students = {s1, s2, s3}; 
-for (int i = 0; i < students.length; i++) {
-     students[i].display(); 
-}
-```
-
-# 6. this Keyword
-
-- The `this` keyword in Java is a reference variable that refers to the current object — the object whose method or constructor is being executed.
-
-
-```java
-class Student {
-    private String name;
-    private int age;
-
-    Student(String name, int age) {
-        this.name = name; // 'this' refers to current object
-        this.age = age;
-    }
-    void display() {
-        System.out.println(this.name + " " + this.age);
-    }
-
-}
-```
-```java
-class Main {
-    public static void main(String[] args){
-        Student s1 = new Student("John", 20); // inside of Constructor this mean s1 object 
-        Student s2 = new Student("Mary", 21); 
-        Student s3 = new Student("David", 19);
-        s1.display(); // inside of  method this mean s1 object
-    }
-}
