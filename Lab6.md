@@ -169,6 +169,7 @@ class Main {
         s1.display(); // inside of  method this mean s1 object
     }
 }
+```
 
 # 6. Access Modifiers
 
