@@ -146,7 +146,7 @@ public class Main {
         s1.display();
     }
 }
-
+```
 - object in method parameter
 ```java
 class Student {
