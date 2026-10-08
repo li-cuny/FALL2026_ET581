@@ -146,7 +146,7 @@ printFruit(fruit1);
 
 means that the `fruit1` object is passed to the `printFruit()` method.
 
-### 6. Pass two Fruit Object to a Method**
+### 6. Pass two Fruit Object to a Method
 
 In Main.java create a method called `compareWeight()` that accepts **two `Fruit` objects**:
 
