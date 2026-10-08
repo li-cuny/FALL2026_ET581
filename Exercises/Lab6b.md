@@ -53,8 +53,7 @@ The method should return the product's name and price.
 Example:
 
 ```text
-Name: Apple
-Price: 1.50
+Name: Apple , Price: 1.50
 ```
 
 In `main()`:
