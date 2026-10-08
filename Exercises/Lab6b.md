@@ -1,4 +1,4 @@
-# **Product Class 
+# **Product Class** 
 
 ## **1 — Product Class and Constructors**
 
@@ -200,7 +200,7 @@ In `main()`:
 ```java
 printProducts(products);
 ```
-## **9 — create sortProduct() in main()
+## **9 — create sortProduct() in main()**
 
 Create a method:
 ```
