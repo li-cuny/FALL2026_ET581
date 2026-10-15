@@ -71,7 +71,13 @@ class Car {
     } // every time object created - obj level
 }
 ```
+## 3.3 initialize member variable
 
+| Feature | Static Block | Instance Block |
+|---|---|---|
+| Runs | Once per class initialization | Every object |
+| Initializes | Static variables | Instance variables |
+| Keyword | `static` | None |
 
 
 
