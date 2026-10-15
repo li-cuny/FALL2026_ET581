@@ -224,7 +224,7 @@ Requirements:
 5. Call `filterAnimals()` and store the returned array in another `Animal[]` variable.
 6. Use a `for` loop to display the animals in the returned array.
 
-You may use an `ArrayList` inside the method to collect matching animals, then convert it to an `Animal[]` array before returning it.
+
 
 **Main class:**
 
