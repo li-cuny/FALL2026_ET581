@@ -1,5 +1,5 @@
 
-# 1. constructor chaining
+# 1. Constructor chaining
 ```java
 class Student {
     String name;
@@ -28,10 +28,12 @@ class Student {
 - this("Unknown", 0) calls the constructor with two parameters.
 
 # 2. Named Object & Anonymous object
+
 ```java
 String name = new String("Alice"); // named object
 name.length(); 
 new String("Bob").length(); // anonymous object
+```
 
 # 3. instance block & `static` block
 
