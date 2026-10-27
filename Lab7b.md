@@ -1,4 +1,4 @@
-## 1. Inheritance in Java
+## 1. Inheritance
 
 ### ➤ Concept
 - **Inheritance** allows one class to **reuse** the code of another.
