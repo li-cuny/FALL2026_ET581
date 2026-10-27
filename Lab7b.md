@@ -1,6 +1,5 @@
 ## 1. Inheritance
 
-### ➤ Concept
 - **Inheritance** allows one class to **reuse** the code of another.
 - The class being inherited from is the **superclass**.
 - The class that inherits is the **subclass**.
