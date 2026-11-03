@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lab8.md</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" href="file:///Users/changlinli/Documents/qcc/fall2026/FALL2026_ET581/R%3A%5C2.Travail%5C1.Enseignement%5CCours%5C_1.Outils%5C2.Developpement%5C1.SCSS%5Cmain.css" type="text/css"><link rel="stylesheet" href="file:///Users/changlinli/Documents/qcc/fall2026/FALL2026_ET581/D%3A%5Crdaros%5CCours%5C_1.Outils%5C2.Developpement%5C1.SCSS%5Cmain.css" type="text/css">
+</head>
+
+<body>
+    <h1 id="lab-8-inheritance-and-polymorphism-problem-solving">Lab 8: Inheritance and Polymorphism Problem-Solving</h1>
+<h2 id="general-instructions">General Instructions</h2>
+<ol>
+<li>Complete the required <code>.java</code> files.</li>
+<li>Do not change the provided <code>main()</code> methods.</li>
+<li>Use <code>private</code> for fields.</li>
+<li>Use <code>public</code> for required constructors and methods.</li>
+<li>Use <code>extends</code>, <code>super()</code>, and <code>@Override</code> where specified.</li>
+<li>Do not use <code>protected</code>.</li>
+</ol>
+<hr>
+<h2 id="exercise-1-vehicle-rental-system">Exercise 1: Vehicle Rental System</h2>
+<p><strong>Concepts:</strong> Inheritance, constructors, <code>super()</code>, getters, arrays, searching</p>
+<h3 id="given-rentaltestjava">Given: <code>RentalTest.java</code></h3>
+<pre class="hljs"><code><div><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RentalTest</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        RentalCar[] cars = {
+            <span class="hljs-keyword">new</span> RentalCar(<span class="hljs-string">"Toyota"</span>, <span class="hljs-number">50</span>, <span class="hljs-number">7</span>),
+            <span class="hljs-keyword">new</span> RentalCar(<span class="hljs-string">"Honda"</span>, <span class="hljs-number">65</span>, <span class="hljs-number">5</span>),
+            <span class="hljs-keyword">new</span> RentalCar(<span class="hljs-string">"Ford"</span>, <span class="hljs-number">45</span>, <span class="hljs-number">10</span>)
+        };
+
+        RentalCar result = findMostExpensive(cars);
+
+        System.out.println(<span class="hljs-string">"Car: "</span> + result.getModel());
+        System.out.println(<span class="hljs-string">"Daily Rate: "</span> + result.getDailyRate());
+        System.out.println(<span class="hljs-string">"Rental Days: "</span> + result.getRentalDays());
+        System.out.println(<span class="hljs-string">"Total Cost: "</span> + result.getTotalCost());
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> RentalCar <span class="hljs-title">findMostExpensive</span><span class="hljs-params">(RentalCar[] cars)</span> </span>{
+        <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> Return the car with the highest total rental cost.</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
+    }
+}
+</div></code></pre>
+<h3 id="your-tasks">Your tasks</h3>
+<p><strong>1. <code>Vehicle.java</code></strong></p>
+<ul>
+<li>Private fields: <code>model</code> (<code>String</code>) and <code>dailyRate</code> (<code>double</code>).</li>
+<li>Public constructor: <code>Vehicle(String model, double dailyRate)</code>.</li>
+<li>Public getters: <code>getModel()</code> and <code>getDailyRate()</code>.</li>
+</ul>
+<p><strong>2. <code>RentalCar.java</code></strong></p>
+<ul>
+<li>Extend <code>Vehicle</code>.</li>
+<li>Private field: <code>rentalDays</code> (<code>int</code>).</li>
+<li>Public constructor: <code>RentalCar(String model, double dailyRate, int rentalDays)</code>.</li>
+<li>Use <code>super(model, dailyRate)</code>.</li>
+<li>Public getter: <code>getRentalDays()</code>.</li>
+<li>Public method <code>getTotalCost()</code> returns the daily rate multiplied by the rental days.</li>
+</ul>
+<p><strong>3. Complete <code>findMostExpensive()</code></strong></p>
+<p>Return the car with the highest total rental cost.</p>
+<h3 id="expected-output">Expected output</h3>
+<pre class="hljs"><code><div>Car: Ford
+Daily Rate: 45.0
+Rental Days: 10
+Total Cost: 450.0
+</div></code></pre>
+<hr>
+<h2 id="exercise-2-notification-system">Exercise 2: Notification System</h2>
+<p><strong>Concepts:</strong> Method overriding, runtime polymorphism, dynamic method dispatch</p>
+<h3 id="given-notificationtestjava">Given: <code>NotificationTest.java</code></h3>
+<pre class="hljs"><code><div><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">NotificationTest</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        Notification[] messages = {
+            <span class="hljs-keyword">new</span> EmailNotification(),
+            <span class="hljs-keyword">new</span> TextNotification(),
+            <span class="hljs-keyword">new</span> EmailNotification()
+        };
+
+        <span class="hljs-keyword">for</span> (Notification message : messages) {
+            message.send();
+        }
+    }
+}
+</div></code></pre>
+<h3 id="your-tasks">Your tasks</h3>
+<p><strong>1. <code>Notification.java</code></strong></p>
+<ul>
+<li>Public method <code>send()</code> prints <code>&quot;Sending a general notification&quot;</code>.</li>
+</ul>
+<p><strong>2. <code>EmailNotification.java</code></strong></p>
+<ul>
+<li>Extend <code>Notification</code>.</li>
+<li>Override <code>send()</code> to print <code>&quot;Sending an email&quot;</code>.</li>
+</ul>
+<p><strong>3. <code>TextNotification.java</code></strong></p>
+<ul>
+<li>Extend <code>Notification</code>.</li>
+<li>Override <code>send()</code> to print <code>&quot;Sending a text message&quot;</code>.</li>
+</ul>
+<h3 id="expected-output">Expected output</h3>
+<pre class="hljs"><code><div>Sending an email
+Sending a text message
+Sending an email
+</div></code></pre>
+<p><strong>Requirement:</strong> Do not use <code>if</code> statements to determine which <code>send()</code> method runs. Java should select the overridden method at runtime.</p>
+<hr>
+<h2 id="exercise-3-game-character">Exercise 3: Game Character</h2>
+<p><strong>Concepts:</strong> Upcasting, downcasting, <code>instanceof</code></p>
+<h3 id="given-gametestjava">Given: <code>GameTest.java</code></h3>
+<pre class="hljs"><code><div><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GameTest</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        Character player = <span class="hljs-keyword">new</span> Wizard(<span class="hljs-string">"Merlin"</span>, <span class="hljs-number">80</span>);
+
+        System.out.println(player.getName());
+
+        <span class="hljs-keyword">if</span> (player <span class="hljs-keyword">instanceof</span> Wizard) {
+            Wizard wizard = (Wizard) player;
+            wizard.castSpell();
+        }
+
+        Character anotherPlayer = <span class="hljs-keyword">new</span> Character(<span class="hljs-string">"Alex"</span>);
+
+        <span class="hljs-keyword">if</span> (anotherPlayer <span class="hljs-keyword">instanceof</span> Wizard) {
+            Wizard wizard = (Wizard) anotherPlayer;
+            wizard.castSpell();
+        }
+    }
+}
+</div></code></pre>
+<h3 id="your-tasks">Your tasks</h3>
+<p><strong>1. <code>Character.java</code></strong></p>
+<ul>
+<li>Private field: <code>name</code>.</li>
+<li>Public constructor: <code>Character(String name)</code>.</li>
+<li>Public getter: <code>getName()</code>.</li>
+</ul>
+<p><strong>2. <code>Wizard.java</code></strong></p>
+<ul>
+<li>Extend <code>Character</code>.</li>
+<li>Private field: <code>mana</code> (<code>int</code>).</li>
+<li>Public constructor: <code>Wizard(String name, int mana)</code>.</li>
+<li>Use <code>super(name)</code>.</li>
+<li>Public method <code>castSpell()</code> prints <code>&quot;Casting spell with &quot;</code> followed by the mana value and <code>&quot; mana&quot;</code>.</li>
+</ul>
+<h3 id="expected-output">Expected output</h3>
+<pre class="hljs"><code><div>Merlin
+Casting spell with 80 mana
+</div></code></pre>
+<h3 id="questions">Questions</h3>
+<ol>
+<li>Which statement performs upcasting?</li>
+<li>Which statement performs downcasting?</li>
+<li>Why does the second <code>if</code> statement not execute?</li>
+<li>What could happen if you tried to cast <code>anotherPlayer</code> to <code>Wizard</code> without checking its actual type?</li>
+</ol>
+<hr>
+<h2 id="exercise-4-smart-home-devices">Exercise 4: Smart Home Devices</h2>
+<p><strong>Concepts:</strong> Field hiding, method overriding, reference type, actual object type</p>
+<h3 id="given-devicetestjava">Given: <code>DeviceTest.java</code></h3>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Device</span> </span>{
+    String status = <span class="hljs-string">"Device is on standby"</span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getStatus</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> status;
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SmartLight</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Device</span> </span>{
+    String status = <span class="hljs-string">"Smart light is on"</span>;
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getStatus</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> status;
+    }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DeviceTest</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        Device d = <span class="hljs-keyword">new</span> SmartLight();
+
+        System.out.println(d.status);
+        System.out.println(d.getStatus());
+    }
+}
+</div></code></pre>
+<h3 id="your-tasks">Your tasks</h3>
+<ol>
+<li>Do not change the code.</li>
+<li>Write the output.</li>
+<li>Explain why <code>d.status</code> and <code>d.getStatus()</code> produce different results.</li>
+<li>Identify which access is determined at compile time and which method call is determined at runtime.</li>
+</ol>
+<h3 id="expected-output">Expected output</h3>
+<pre class="hljs"><code><div>Device is on standby
+Smart light is on
+</div></code></pre>
+<hr>
+<h2 id="exercise-5-museum-ticket-system">Exercise 5: Museum Ticket System</h2>
+<p><strong>Concepts:</strong> Inheritance, constructor chaining, <code>super()</code>, private fields, method overriding</p>
+<h3 id="given-tickettestjava">Given: <code>TicketTest.java</code></h3>
+<pre class="hljs"><code><div><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TicketTest</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        GuidedTicket ticket = <span class="hljs-keyword">new</span> GuidedTicket(
+            <span class="hljs-string">"Ancient History"</span>,
+            <span class="hljs-number">25.0</span>,
+            <span class="hljs-string">"English"</span>
+        );
+
+        ticket.displayInfo();
+    }
+}
+</div></code></pre>
+<h3 id="your-tasks">Your tasks</h3>
+<p><strong>1. <code>MuseumTicket.java</code></strong></p>
+<ul>
+<li>Private fields: <code>exhibitionName</code> (<code>String</code>) and <code>price</code> (<code>double</code>).</li>
+<li>Public constructor: <code>MuseumTicket(String exhibitionName, double price)</code>.</li>
+<li>Public getters for both fields.</li>
+<li>Public method <code>displayInfo()</code> prints the exhibition name and ticket price.</li>
+</ul>
+<p><strong>2. <code>GuidedTicket.java</code></strong></p>
+<ul>
+<li>Extend <code>MuseumTicket</code>.</li>
+<li>Private field: <code>language</code> (<code>String</code>).</li>
+<li>Public constructor: <code>GuidedTicket(String exhibitionName, double price, String language)</code>.</li>
+<li>Use <code>super(exhibitionName, price)</code> to initialize the parent fields.</li>
+<li>Public getter: <code>getLanguage()</code>.</li>
+<li>Override <code>displayInfo()</code> to print the exhibition name, price, and tour language.</li>
+</ul>
+<h3 id="expected-output">Expected output</h3>
+<pre class="hljs"><code><div>Exhibition: Ancient History
+Price: 25.0
+Tour Language: English
+</div></code></pre>
+<hr>
+<h2 id="submission-requirements">Submission Requirements</h2>
+<ol>
+<li>Submit all required <code>.java</code> files.</li>
+<li>Do not change the provided <code>main()</code> methods.</li>
+<li>Use private fields and public getters as specified.</li>
+<li>Use inheritance and constructor chaining where required.</li>
+<li>Verify that each program produces the expected output.</li>
+</ol>
+
+</body>
+
+</html>
