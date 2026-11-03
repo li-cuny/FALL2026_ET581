@@ -1,4 +1,4 @@
-# 📝 Lecture 8 
+# Lecture 8 
 
 ---
 ## 1. Polymorphism
@@ -10,12 +10,12 @@
 
 ### Types of Polymorphism
 
-#### 🧩 Compile-time Polymorphism (Static Polymorphism)
+####  Compile-time Polymorphism (Static Polymorphism)
 - Achieved via **method overloading**
 - Methods have the **same name but different parameters**
 - Can be applied to **both instance and static methods**
 
-#### ⚙️ Runtime Polymorphism (Dynamic Polymorphism)
+####  Runtime Polymorphism (Dynamic Polymorphism)
 - Achieved via **method overriding**
 - Determined **at runtime**
 - Requires **inheritance**
@@ -165,7 +165,7 @@ if (p instanceof Child) {
     c.play();
 }}
 ```
-##### 🧠 Memory Representation (Upcasting / Downcasting)
+#####  Memory Representation (Upcasting / Downcasting)
 ```java
 Heap:
 [ Child object ]
@@ -177,7 +177,7 @@ Reference variable:
 p ---> points to Child object
 c ---> points to same Child object
 ```
-##### 🔥 Key Idea
+#####  Key Idea
 
 - Both `p` and `c` point to the **same object in heap**
 - Only the **reference type changes**, not the object
@@ -189,49 +189,6 @@ c ---> points to same Child object
 
 ---
 
-#### 1️⃣ Default Access(Package-Private Access) 
-
-- No modifier written (just leave it blank)
-- Accessible **only within the same package**
-- Not accessible from subclasses in **different packages**
-
-#### **Example**
-
-##### File: `package1/Parent.java`
-```java
-package package1;
-
-class Parent {          // default access
-    int data = 100;     // default access
-}
-```
-
-##### File: `package1/Main.java`
-```java
-package package1;
-
-public class Main {
-    public static void main(String[] args) {
-        Parent p = new Parent();
-        System.out.println(p.data); // ✅ Accessible (same package)
-    }
-}
-```
-
-##### File: `package2/Other.java`
-```java
-package package2;
-import package1.Parent;
-
-public class Other {
-    public static void main(String[] args) {
-        Parent p = new Parent(); 
-        System.out.println(p.data); // ❌ Compile-time error (different package)
-    }
-}
-```
-
----
 
 #### 2️⃣ Protected Access
 
