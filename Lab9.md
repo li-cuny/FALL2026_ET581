@@ -1,4 +1,4 @@
-# 🧾 Lecture 9 — Abstract Classes and Interfaces
+# Lecture 9 — Abstract Classes and Interfaces
 ---
 
 ## Abstraction
