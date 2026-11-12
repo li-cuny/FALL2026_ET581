@@ -200,3 +200,17 @@ Collections.sort(students);
 System.out.println(students); // [Bob(20), Alice(22), Charlie(25)]
 ```
 
+### Store primitive types
+- Collections in Java only store objects — not primitive types.
+
+### Wrapper class
+- A wrapper class “wraps” a primitive data type into an object, so we can use it in places where an object is required.
+
+
+| Primitive | Wrapper Class | Boxing (Primitive → Object) | Unboxing (Object → Primitive) | Parsing (String → Primitive) | Auto-boxing / Auto-unboxing |
+|----------|--------------|-----------------------------|-------------------------------|------------------------------|-----------------------------|
+| int      | Integer      | Integer.valueOf(int i)      | intValue()                   | Integer.parseInt(String s)   | Integer i = 20; int z = i;  |
+| long     | Long         | Long.valueOf(long l)        | longValue()                  | Long.parseLong(String s)     | Long l = 100L; long m = l;  |
+| double   | Double       | Double.valueOf(double d)    | doubleValue()                | Double.parseDouble(String s) | Double d = 2.5; double e = d; |
+| char     | Character    | Character.valueOf(char c)   | charValue()                  | ❌ No parseChar() (use charAt(0)) | Character c = 'A'; char ch = c; |
+| boolean  | Boolean      | Boolean.valueOf(boolean b)  | booleanValue()               | Boolean.parseBoolean(String s) | Boolean b = true; boolean flag = b; |
